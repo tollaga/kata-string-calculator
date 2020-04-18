@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		827066FE244B026A00BAB239 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827066FD244B026A00BAB239 /* StringCalculator.swift */; };
 		829712A0244ACDD400424FAA /* Kata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82971296244ACDD400424FAA /* Kata.framework */; };
 		829712A5244ACDD400424FAA /* KataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712A4244ACDD400424FAA /* KataTests.swift */; };
 		829712A7244ACDD400424FAA /* Kata.h in Headers */ = {isa = PBXBuildFile; fileRef = 82971299244ACDD400424FAA /* Kata.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		827066FD244B026A00BAB239 /* StringCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculator.swift; sourceTree = "<group>"; };
 		82971296244ACDD400424FAA /* Kata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82971299244ACDD400424FAA /* Kata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kata.h; sourceTree = "<group>"; };
 		8297129A244ACDD400424FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				82971299244ACDD400424FAA /* Kata.h */,
 				8297129A244ACDD400424FAA /* Info.plist */,
+				827066FD244B026A00BAB239 /* StringCalculator.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827066FE244B026A00BAB239 /* StringCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +401,7 @@
 		829712AE244ACDD400424FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -414,6 +419,7 @@
 		829712AF244ACDD400424FAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
