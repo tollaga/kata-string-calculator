@@ -1,0 +1,16 @@
+name: Test CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  test:
+    name: Test
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build and test
+      run: |
+        xcodebuild clean test -project Kata.xcodeproj -scheme KataTests
+        bash <(curl -s https://codecov.io/bash)
