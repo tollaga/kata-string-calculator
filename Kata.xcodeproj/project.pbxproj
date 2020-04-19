@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8243F58F244C11B200A2AE47 /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 8243F58E244C11B200A2AE47 /* Fakery */; };
 		827066FE244B026A00BAB239 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827066FD244B026A00BAB239 /* StringCalculator.swift */; };
 		829712A0244ACDD400424FAA /* Kata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82971296244ACDD400424FAA /* Kata.framework */; };
 		829712A5244ACDD400424FAA /* KataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712A4244ACDD400424FAA /* KataTests.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8243F590244C15C900A2AE47 /* blank.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = blank.yml; path = .github/workflows/blank.yml; sourceTree = "<group>"; };
 		827066FD244B026A00BAB239 /* StringCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculator.swift; sourceTree = "<group>"; };
 		82971296244ACDD400424FAA /* Kata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82971299244ACDD400424FAA /* Kata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kata.h; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			files = (
 				829712A0244ACDD400424FAA /* Kata.framework in Frameworks */,
 				829712B2244ACE1300424FAA /* Nimble in Frameworks */,
+				8243F58F244C11B200A2AE47 /* Fakery in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 		8297128C244ACDD400424FAA = {
 			isa = PBXGroup;
 			children = (
+				8243F590244C15C900A2AE47 /* blank.yml */,
 				82971298244ACDD400424FAA /* Sources */,
 				829712A3244ACDD400424FAA /* Tests */,
 				82971297244ACDD400424FAA /* Products */,
@@ -119,6 +123,8 @@
 			dependencies = (
 			);
 			name = Kata;
+			packageProductDependencies = (
+			);
 			productName = kata;
 			productReference = 82971296244ACDD400424FAA /* Kata.framework */;
 			productType = "com.apple.product-type.framework";
@@ -139,6 +145,7 @@
 			name = KataTests;
 			packageProductDependencies = (
 				829712B1244ACE1300424FAA /* Nimble */,
+				8243F58E244C11B200A2AE47 /* Fakery */,
 			);
 			productName = kataTests;
 			productReference = 8297129F244ACDD400424FAA /* KataTests.xctest */;
@@ -174,6 +181,7 @@
 			mainGroup = 8297128C244ACDD400424FAA;
 			packageReferences = (
 				829712B0244ACE1300424FAA /* XCRemoteSwiftPackageReference "Nimble" */,
+				8243F58D244C11B200A2AE47 /* XCRemoteSwiftPackageReference "Fakery" */,
 			);
 			productRefGroup = 82971297244ACDD400424FAA /* Products */;
 			projectDirPath = "";
@@ -467,6 +475,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8243F58D244C11B200A2AE47 /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
 		829712B0244ACE1300424FAA /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble.git";
@@ -478,6 +494,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8243F58E244C11B200A2AE47 /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8243F58D244C11B200A2AE47 /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
 		829712B1244ACE1300424FAA /* Nimble */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 829712B0244ACE1300424FAA /* XCRemoteSwiftPackageReference "Nimble" */;

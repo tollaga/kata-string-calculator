@@ -12,7 +12,7 @@ final class StringCalculator {
     
     private func obtainNumbers(_ string: String) -> [Int] {
         let components = string.components(separatedBy: StringCalculator.delimiter)
-        return components.map( { parseInt($0) })
+        return components.map({ parseInt($0) })
     }
     
     private func parseInt(_ string: String) -> Int {
