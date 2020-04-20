@@ -44,6 +44,11 @@ class KataTests: XCTestCase {
         expect(sum).to(equal(result))
     }
     
+    func test_add_givenNewlineDelimiter_shouldReturnCorrectResult () throws {
+        let result = sut.add("1\n2,3")
+        expect(6).to(equal(result))
+    }
+    
     private func givenRandomNumbers(limit: Int = 100) -> [Int] {
         let result = Array(repeating: 0, count: limit)
         return result.map({ _ in faker.number.randomInt(min: 0, max: limit) })

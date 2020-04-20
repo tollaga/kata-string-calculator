@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8243F58F244C11B200A2AE47 /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 8243F58E244C11B200A2AE47 /* Fakery */; };
+		8243F592244C219A00A2AE47 /* ParseNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243F591244C219A00A2AE47 /* ParseNumber.swift */; };
+		8243F594244C21B700A2AE47 /* ParseNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243F593244C21B700A2AE47 /* ParseNumbers.swift */; };
 		827066FE244B026A00BAB239 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827066FD244B026A00BAB239 /* StringCalculator.swift */; };
 		829712A0244ACDD400424FAA /* Kata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82971296244ACDD400424FAA /* Kata.framework */; };
 		829712A5244ACDD400424FAA /* KataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712A4244ACDD400424FAA /* KataTests.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		8243F590244C15C900A2AE47 /* blank.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = blank.yml; path = .github/workflows/blank.yml; sourceTree = "<group>"; };
+		8243F591244C219A00A2AE47 /* ParseNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseNumber.swift; sourceTree = "<group>"; };
+		8243F593244C21B700A2AE47 /* ParseNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseNumbers.swift; sourceTree = "<group>"; };
 		827066FD244B026A00BAB239 /* StringCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculator.swift; sourceTree = "<group>"; };
 		82971296244ACDD400424FAA /* Kata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82971299244ACDD400424FAA /* Kata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kata.h; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				82971299244ACDD400424FAA /* Kata.h */,
 				8297129A244ACDD400424FAA /* Info.plist */,
 				827066FD244B026A00BAB239 /* StringCalculator.swift */,
+				8243F591244C219A00A2AE47 /* ParseNumber.swift */,
+				8243F593244C21B700A2AE47 /* ParseNumbers.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -215,6 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8243F594244C21B700A2AE47 /* ParseNumbers.swift in Sources */,
+				8243F592244C219A00A2AE47 /* ParseNumber.swift in Sources */,
 				827066FE244B026A00BAB239 /* StringCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
