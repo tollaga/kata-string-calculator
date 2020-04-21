@@ -15,6 +15,7 @@
 		829712A5244ACDD400424FAA /* KataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712A4244ACDD400424FAA /* KataTests.swift */; };
 		829712A7244ACDD400424FAA /* Kata.h in Headers */ = {isa = PBXBuildFile; fileRef = 82971299244ACDD400424FAA /* Kata.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		829712B2244ACE1300424FAA /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 829712B1244ACE1300424FAA /* Nimble */; };
+		82BBC180244EB85200BD36DD /* ParseDelimiters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBC17F244EB85200BD36DD /* ParseDelimiters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		8297129F244ACDD400424FAA /* KataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		829712A4244ACDD400424FAA /* KataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataTests.swift; sourceTree = "<group>"; };
 		829712A6244ACDD400424FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82BBC17F244EB85200BD36DD /* ParseDelimiters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseDelimiters.swift; sourceTree = "<group>"; };
+		82BBC181244EC4C200BD36DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 		8297128C244ACDD400424FAA = {
 			isa = PBXGroup;
 			children = (
+				82BBC181244EC4C200BD36DD /* README.md */,
 				8243F590244C15C900A2AE47 /* blank.yml */,
 				82971298244ACDD400424FAA /* Sources */,
 				829712A3244ACDD400424FAA /* Tests */,
@@ -88,6 +92,7 @@
 				827066FD244B026A00BAB239 /* StringCalculator.swift */,
 				8243F591244C219A00A2AE47 /* ParseNumber.swift */,
 				8243F593244C21B700A2AE47 /* ParseNumbers.swift */,
+				82BBC17F244EB85200BD36DD /* ParseDelimiters.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8243F594244C21B700A2AE47 /* ParseNumbers.swift in Sources */,
+				82BBC180244EB85200BD36DD /* ParseDelimiters.swift in Sources */,
 				8243F592244C219A00A2AE47 /* ParseNumber.swift in Sources */,
 				827066FE244B026A00BAB239 /* StringCalculator.swift in Sources */,
 			);

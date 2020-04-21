@@ -1,5 +1,6 @@
 # TDD Kata 1 - String Calculator
 ![CI](https://github.com/tollaga/kata-string-calculator/workflows/CI/badge.svg)
+[![codecov](https://codecov.io/gh/tollaga/kata-string-calculator/branch/master/graph/badge.svg)](https://codecov.io/gh/tollaga/kata-string-calculator)
 
  [Kata definition](https://osherove.com/tdd-kata-1)
 ## Steps
