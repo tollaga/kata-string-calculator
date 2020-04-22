@@ -11,6 +11,8 @@ final class ParseDelimiters {
         delimters += obtainDelimiters(string)
         return delimters
     }
+    
+    // MARK: - Private
         
     private func obtainDelimiters(_ string: String) -> String {
         let components = string.components(separatedBy: ParseDelimiters.separator)

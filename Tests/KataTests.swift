@@ -11,25 +11,25 @@ class KataTests: XCTestCase {
     let faker = Faker()
       
     func test_add_givenEmpty_shouldReturnZero () throws {
-        let result = sut.add("")
+        let result = try sut.add("")
         
         expect(0).to(equal(result))
     }
     
     func test_add_givenZero_shouldReturnZero () throws {
-        let result = sut.add("0")
+        let result = try sut.add("0")
         
         expect(0).to(equal(result))
     }
     
     func test_add_givenOne_shouldReturnOne () throws {
-        let result = sut.add("1")
+        let result = try sut.add("1")
         
         expect(1).to(equal(result))
     }
     
     func test_add_givenOneAndTwo_shouldReturnThree () throws {
-        let result = sut.add("1,2")
+        let result = try sut.add("1,2")
         
         expect(3).to(equal(result))
     }
@@ -39,20 +39,46 @@ class KataTests: XCTestCase {
         let sum = numbers.reduce(0, +)
         let expresion = givenExpresion(numbers: numbers)
 
-        let result = sut.add(expresion)
+        let result = try sut.add(expresion)
         
         expect(sum).to(equal(result))
     }
     
     func test_add_givenNewlineDelimiter_shouldReturnCorrectResult () throws {
-        let result = sut.add("1\n2,3")
+        let result = try sut.add("1\n2,3")
         expect(6).to(equal(result))
     }
     
     func test_add_givenSumWithDelimitierExpresion_shouldReturnCorrectResult () throws {
-        let result = sut.add("//;\n1;2")
+        let result = try sut.add("//;\n1;2")
         expect(3).to(equal(result))
     }
+    
+    func test_add_givenNegative_shouldReturnException () throws {
+        expect {
+            _ = try self.sut.add("-1")
+        }.to(throwError { error in
+            if case let StringCalculatorError.negativesNotAllowed(value) = error {
+                expect("[-1]").to(equal(value))
+            } else {
+                fail()
+            }
+        })
+    }
+       
+    func test_add_givenNegatives_shouldReturnException () throws {
+        expect {
+            _ = try self.sut.add("-1,2,-2")
+        }.to(throwError { error in
+            if case let StringCalculatorError.negativesNotAllowed(value) = error{
+                expect("[-1, -2]").to(equal(value))
+            } else {
+                fail()
+            }
+        })
+    }
+    
+    // MARK: - Private
     
     private func givenRandomNumbers(limit: Int = 100) -> [Int] {
         let result = Array(repeating: 0, count: limit)
