@@ -78,6 +78,11 @@ class KataTests: XCTestCase {
         })
     }
     
+    func test_add_givenBiggerNumber_shouldReturnCorrectResultIngnoringThatValue () throws {
+        let result = try sut.add("2,1001")
+        expect(2).to(equal(result))
+    }
+    
     // MARK: - Private
     
     private func givenRandomNumbers(limit: Int = 100) -> [Int] {
