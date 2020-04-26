@@ -5,9 +5,18 @@ final class StringCalculator {
     private static let defaultResult = 0
     private static let limit = 1000
     
+    private let parseNumbers: ParseNumbers
+    private let parseDelimiters: ParseDelimiters
+    
+    public init(pareNumbers: ParseNumbers = ParseNumbers(),
+                parseDelimiters: ParseDelimiters = ParseDelimiters()) {
+        self.parseNumbers = pareNumbers
+        self.parseDelimiters = parseDelimiters
+    }
+    
     public func add(_ expresion: String) throws -> Int {
-        let delimiters = ParseDelimiters().parse(expresion)
-        var numbers = try ParseNumbers().parse(expresion, delimiters: delimiters)
+        let delimiters = parseDelimiters.parse(expresion)
+        var numbers = try parseNumbers.parse(expresion, delimiters: delimiters)
         try checkNegatives(numbers)
         numbers = filter(numbers, byLimit: StringCalculator.limit)
         return numbers.reduce(StringCalculator.defaultResult, +)

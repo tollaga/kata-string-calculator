@@ -6,9 +6,15 @@ final class ParseNumbers {
     private static let or = "|"
     private static let separator = "\n"
 
+    private let parseNumber: ParseNumber
+    
+    public init(pareNumber: ParseNumber = ParseNumber()) {
+        self.parseNumber = pareNumber
+    }
+    
     public func parse(_ string: String, delimiters: [Delimiter]) throws -> [Int] {
         let components = try obtainComponents(string, delimiters: delimiters)
-        return components.map( { ParseNumber().parse($0) } )
+        return components.map( { parseNumber.parse($0) } )
     }
     
     private func obtainComponents(_ string: String, delimiters: [Delimiter]) throws -> [String] {
