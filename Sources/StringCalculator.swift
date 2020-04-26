@@ -6,7 +6,7 @@ final class StringCalculator {
     
     public func add(_ expresion: String) throws -> Int {
         let delimiters = ParseDelimiters().parse(expresion)
-        let numbers = ParseNumbers().parse(expresion, delimiters: delimiters)
+        let numbers = try ParseNumbers().parse(expresion, delimiters: delimiters)
         try checkNegatives(numbers)
         return numbers.reduce(StringCalculator.defaultResult, +)
     }
