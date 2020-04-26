@@ -88,6 +88,11 @@ class KataTests: XCTestCase {
         expect(6).to(equal(result))
     }
     
+    func test_add_givenSumWithLMultiDelimitierExpresion_shouldReturnCorrectResult () throws {
+        let result = try sut.add("//[*][%]\n1*2%3")
+        expect(6).to(equal(result))
+    }
+    
     // MARK: - Private
     
     private func givenRandomNumbers(limit: Int = 100) -> [Int] {
